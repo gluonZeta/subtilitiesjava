@@ -10,14 +10,15 @@ class PersonneTest {
         Personne personne = new Personne() {
             @Override
             public String toString() {
-                return "Last Name:" + this.getLastName();
+                return "Last Name: " + this.getLastName();
             }
         };
-        personne.setFirstName("Andraina");
-        personne.setLastName("RAJAONARISATA");
-        personne.setAge(24);
+        personne.setFirstName("Feynman");
+        personne.setLastName("RICHARD");
+        personne.setAge(34);
         System.out.println(personne.toString());
         Assertions.assertNotNull(personne);
+        Assertions.assertTrue(personne.toString().contains("RICHARD"));
     }
 
 }
