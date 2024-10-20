@@ -16,19 +16,19 @@ class FileManipulationTest {
     }
 
     @Test
-    public void testInstanciation() {
+    void testInstanciation() {
         Assertions.assertNotNull(this.fileManipulation);
         Assertions.assertEquals("C:\\Users\\andra\\Documents\\my_project\\data\\train.csv",
                 this.fileManipulation.getFilePath());
     }
 
-    public void testReadFile() {
+    @Test
+    void testReadFile() {
         List<String> lines = this.fileManipulation.getFileLines();
         Assertions.assertNotNull(lines);
     }
 
-    @Test
-    public void testStackOverflow() {
+    void testStackOverflow() {
         this.fileManipulation.stackOverflowMethod(23);
     }
 
